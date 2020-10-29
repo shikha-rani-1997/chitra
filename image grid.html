@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  margin-left: 80px;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 15%;
+  max-width: 25%;
+  padding: 0 0px;
+}
+.column .grid{
+
+  position:relative;
+  opacity:1;
+  display:block;
+  height:auto;
+  transition:0.5s ease;
+  backface-visibility:hidden;
+margin:10px;
+}
+.column .grid .imgbox{
+position:relative;
+overflow:hidden;
+}
+.column .grid .imgbox img{
+max-width:100%;
+transition:transform 2s;
+}
+.grid:hover .imgbox img{
+   transform:scale(1.2);
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 300px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+</style>
+<body>
+
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+        <div class="grid"><div class="imgbox"><img src="1.jpeg" style="width:80%" ></div></div>
+            
+       <div class="grid"><div class="imgbox"><img src="2.jpeg" style="width:80%" ></div></div>
+    
+        <div class="grid"><div class="imgbox"><img src="3.jpeg" style="width:80%"  ></div></div>
+        <div class="grid"><div class="imgbox"><img src="4.jpeg" style="width:80%"  ></div></div>
+        <div class="grid"><div class="imgbox"><img src="5.jpeg" style="width:80%"  ></div></div>
+        <div class="grid"><div class="imgbox"><img src="6.jpeg" style="width:80%"  ></div></div>
+        <div class="grid"><div class="imgbox"><img src="11.jpeg" style="width:80%"  ></div></div>
+    
+  </div>
+  <div class="column">
+        <div class="grid"><div class="imgbox"><img src="9.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="10.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="12.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="7.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="1.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="2.jpeg" style="width:80%"></div></div>
+  </div>  
+  <div class="column">
+        <div class="grid"><div class="imgbox"><img src="3.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="4.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="5.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="6.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="11.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="9.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="10.jpeg" style="width:80%"></div></div>
+  </div>
+  <div class="column">
+        <div class="grid"><div class="imgbox"><img src="12.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="7.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="1.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="2.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="3.jpeg" style="width:80%"></div></div>
+        <div class="grid"><div class="imgbox"><img src="4.jpeg" style="width:80%"></div></div>
+  </div>
+</div>
+
+
+</body>
+</html>
