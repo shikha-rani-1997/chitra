@@ -4,19 +4,21 @@
 
 body {
   height: 100%;
-  margin: 0;
+  margin: 10;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   overflow: hidden;
+  background-image: url("artist.png");
+  background-repeat: no-repeat;
   background-color: white;
-  padding: 20px 40px;
+  padding: 20px 60px;
 }
 
 .header a {
   float: left;
-  color: black;
+  color: rgb(31, 58, 31);
   text-align: center;
   padding: 20px;
   text-decoration: none;
@@ -28,11 +30,14 @@ body {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px 40px;
 }
 
 .header a:hover {
   background-color: #808080;
-  color: black;
+  color: rgb(29, 46, 25);
+  transition: 0.5 ease;
 }
 
 .header a.active {
@@ -54,39 +59,13 @@ body {
   .header-right {
     float: none;
   }
-
-  .overlay-content {
-    position: absolute;
-    height: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 36px;
-    color: white;
-  }
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .overlay:hover .overlay-content {
-    opacity: 1;
-  }
 }
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("deer.jpeg");
-  height: 50%;
+  padding: 100px;
+  background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,24 +79,65 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: larger;
 }
 
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(78, 11, 11, 0);
+  background-color: rgba(49, 16, 16, 0.9);
+  overflow-y: hidden;
+  transition: 0.6s;
 }
-.hero-text button:hover {
-  background-color: #555;
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  display: block;
+  transition: 0.3s;
+  top: 50%;
+  left: 50%;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
   color: white;
 }
 
+.overlay .closebtn {
+  position: absolute;
+  opacity: 1;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
 .row {
+  margin-top: 50px;
   margin-left: 80px;
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -146,18 +166,29 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .column .grid .imgbox img {
   max-width: 100%;
   transition: transform 2s;
 }
 .grid:hover .imgbox img {
-  transform: scale(1.2);
+  transform: scale(1.8);
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 50%;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

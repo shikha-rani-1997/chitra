@@ -6,6 +6,7 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+imgbox img{}
 
 .overlay {
   height: 0%;
@@ -15,40 +16,43 @@ body {
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+  background-color: rgba(0,0,0, 0.7);
+  overflow-y: hidden;
+  transition: 0.6s;
 }
 
 .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
   display: block;
   transition: 0.3s;
+  top:50%;
+  left:50%;
 }
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+        .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+color:white;
+}
+
+
 }
 
 .overlay .closebtn {
   position: absolute;
+  opacity:1;
   top: 20px;
   right: 45px;
   font-size: 60px;
 }
 
 @media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
@@ -59,26 +63,27 @@ body {
 </style>
 </head>
 <body>
-
+  
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+   <h2>hi im rupa</h2>
+   <p>yiulour;touprit''t[retoe[tet[</p>
   </div>
 </div>
 
-<span style="margin=0; position:absolute; top:50%; left:50%; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; know more</span>
+<span  style="font-size:30px; cursor:pointer; display: flex;
+justify-content: center;
+align-items: center;
+" onclick="openNav()">&#9776; know more</span>
 
 <script>
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("myNav").style.height = "100%";
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  document.getElementById("myNav").style.height = "0%";
 }
 </script>
      
