@@ -1,0 +1,348 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          body {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  background-image: url("flower.jpeg");
+  background-repeat: no-repeat; 
+  background-size:cover;
+  height: auto;
+  background-position:center;
+
+}
+          .heading 
+          { padding:40px;
+            font-weight:1000;
+            font-style: oblique;
+            background-color: rgb(49, 43, 43);
+            font-size:40px;
+            color:white;
+            opacity:0.7;
+    }
+    .header-right{
+      float: right;
+      text-align: center;
+      padding: 5px;
+      border-radius: 14px;
+    }
+    
+.header-right a{
+  color: rgb(190, 204, 190);
+  padding: 20px 20px;
+  
+}
+.header-right a.active {
+  background-color:#acd859;
+  color: white;
+}
+.header-right a:hover {
+  background-color: #acd859;
+  color: rgb(29, 39, 26);
+  transition: 0.8 ease;
+}
+    .body {
+        height:70%;
+            background:rgba(14,12,12,0.7);
+            font-size:40px;
+            font-style:bold;
+            color:white;
+            opacity: 0.9;
+            border: 1px solid black;
+    }
+    .flip-box {
+  background-color: transparent;
+  width:60%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  left:50%;
+  padding:40px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 3.5s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-style: oblique;
+  font-size: 30px;
+}
+
+.flip-box-front {
+  background-color: rgb(88, 53, 71);
+  color:white;
+}
+
+.flip-box-back {
+  background-color:rgb(61, 15, 27);
+  color: white;
+  transform: rotateY(180deg);
+}
+.main {
+  max-width:60%;
+  height:auto;
+  margin: auto;
+  background:rgba(14,12,12,0.7);
+  padding:10px;
+
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: rgb(12, 10, 10);
+  padding: 20px 20px;
+}
+.zoom{
+  transition: transform .5s;
+}
+.zoom:hover {
+  -ms-transform: scale(2); 
+  -webkit-transform: scale(2);
+  transform: scale(2); 
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn:hover {
+  background-color: rgb(193, 230, 106);
+  transition: 0.8 ease;
+}
+
+.btn.active {
+  background-color: rgb(213, 240, 114);
+  color: rgb(14, 12, 12);
+}
+    
+    
+    </style>
+    </head>
+    <body>
+        <div class=" heading ">CHITRAKARITA
+          <div class="header-right">
+            <a class="active" href="about.html">Home</a>
+            <a href="index.html">Gallery</a>
+            <a href="aboutartist.html">About</a>
+          </div>
+        </div>
+        <div class="body">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <h2>WELCOME TO CHITRAKARITA</h2>
+                    <p>This place is for everyone who is struggling to find their place in the world..You will find stories and mementos that I hope will touch your heart.</p>
+                    <p>Painting adds meaning to your moments. It has changed me to see beyond the normal sight, to think beyond what's possible and to draw beyond reach.</p>
+                  </div>
+                  <div class="flip-box-back">
+                    <p>Assuredly, when they write about painting, painters themselves become philosophers, and their own statements suffer from the difficulty of applying words to any one of the silent arts.</p>
+                    <p>There is only one justifiable approach to painting, and it is neither archaeology, nor history, nor science, nor art criticism, nor philosophy; it is paintings</p>
+                    <p>I wish to avail myself of this opportunity to express my heartfelt gratitude for you to visit my artwork.</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="main">
+
+                <h1>CHITRAKALAEN</h1>
+                <hr>
+                
+                <h1><center>EXTRAVAGANCES</center></h1>
+                
+                <div id="myBtnContainer">
+                  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                  <button class="btn" onclick="filterSelection('nature')">geometrical</button>
+                  <button class="btn" onclick="filterSelection('cars')">powerful</button>
+                  <button class="btn" onclick="filterSelection('people')">endless art</button>
+                </div>
+                
+                <!-- Portfolio Gallery Grid -->
+                <div class="row">
+                  <div class="column nature">
+                    <div class="content"><div class="zoom">
+                      <img src="6.jpeg" alt="Mountains" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="column nature">
+                    <div class="content"><div class="zoom">
+                    <img src="9.jpeg" alt="Lights" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column nature">
+                    <div class="content">
+                      <div class="zoom">
+                    <img src="11.jpeg" alt="Nature" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="column cars">
+                    <div class="content">
+                      <div class="zoom">
+                      <img src="1.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column cars">
+                    <div class="content">
+                      <div class="zoom">
+                    <img src="10.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column cars">
+                    <div class="content">
+                      <div class="zoom">
+                    <img src="5.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="column people">
+                    <div class="content">
+                      <div class="zoom">
+                      <img src="8.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column people">
+                    <div class="content">
+                      <div class="zoom">
+                    <img src="7.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column people">
+                    <div class="content">
+                      <div class="zoom">
+                    <img src="4.jpeg" alt="Car" style="width:100%; height:300px;">
+                      <h4>statement work</h4>
+                      <p>A picture depicts more than words</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+                
+                </div>
+                </div>
+                <script>
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+    </body>
+</html>

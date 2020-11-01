@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style>
+            body{
+                background-image: url("flower.jpeg");
+  background-size:cover;
+  height:100%;
+  background-position:center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin:0;
+            }
+            .designbody {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+            .border-box-left {
+                width:3%;
+                height:200%;
+                background-color: rgb(63, 1, 63);
+                animation: mymove 5s infinite;
+            }
+            .itembox {
+                width:65%;
+                height:100%;
+                margin:auto;
+                background-color: rgb(190, 176, 190);
+                opacity: 0.9;
+            }
+            .head {
+                width: 100%;height:15%;
+                background-color: rgb(204, 169, 190);
+                text-align: center;
+                font-size: 40px;
+                font: weight 600;
+                color: white;
+                margin-top: 10px;
+            }
+            .lowhead {
+                padding:25px;
+            font-weight:1000;
+            font-style:normal;
+                        }
+            .lowhead a{
+                color:white;
+                font-size: 20px;
+                padding:12px;
+                
+            }
+            
+.lowhead a.active {
+  background-color:rgb(94, 40, 94);
+  color: white;
+}
+.head:hover{
+    color: rgb(13, 14, 13);
+  transition: 0.8 ease;
+}
+.lowhead a:hover {
+  color: rgb(13, 14, 13);
+  transition: 0.8 ease;
+}
+.imgbox {
+                width:60%;
+                height:70%;
+                margin: auto;
+                margin-top: 30px;
+                background-attachment: fixed;  
+}
+.overlay {
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 96%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.imgbox:hover .overlay {
+  opacity: 1;
+}
+.content {
+    background-color:rgb(190, 176, 190);
+    height: 100%;
+}
+.mypic{
+    height:60%;
+    background-color: #f3f1eb;
+    display: flex;
+}
+.mypicright 
+{
+width:70%;
+height:60%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+.border-box-right {
+                width:3%;
+                height:200%;
+                background-color: rgb(63, 1, 63);
+                animation: mymove 5s infinite;
+            }
+            
+@keyframes mymove {
+  100% {box-shadow: 5px 5px 5px 50px rgb(35, 1, 41);}
+}
+      </style>
+
+    </head>
+    <body>
+        <div class="designbody">
+     <div class="border-box-left"></div> 
+
+     <div class="itembox">
+      <div class="head">CHITRAKARITA <div class="lowhead">
+        <a href="about.html">Home</a>
+            <a href="index.html">Gallery</a>
+            <a class="active" href="aboutartist.html">About</a>
+            <a href="oo">Contact</a>
+            </div> </div>
+      <div class="imgbox"><img src="2.jpeg" style="width:100%; background-repeat: no-repeat; 
+  background-size:cover; height:100%;" ><div class="overlay">Freestyle painting is my favourite pursuit</div></div>
+<br>
+<div class="content">
+ <h2 style="font-weight: bold; margin-left:30px;">ABOUT ME</h2>
+ <p style="margin-left:30px;">Fueled by adventure both inside and outside the studio, I scare myself and inspire others as I express and explore life as an artist.</p>
+ <div class="mypic">
+ <div class="mypicleft">
+<img src="hh.png" style="width:80%; background-repeat: no-repeat; 
+  background-size:cover; height:100%;">
+ </div>
+ <div class="mypicright">
+  <div class="card">
+    <img src="3.jpeg" alt="Jane" style="width:30%">
+    <div class="container">
+      <h2>RUPA RANJAN</h2>
+      <p class="title">CEO & Founder of CHITRAKARITA</p>
+      <p>Enough enthusiasm and creativeness to enunciate the power of art</p>
+      <p>example@example.com</p>
+      <p><button class="button">Contact</button></p>
+    </div>
+  </div>
+
+  </div>
+ </div>
+ </div>
+</div>
+
+ <div class="border-box-right"></div>
+ </div>
+    </body>
+</html>
